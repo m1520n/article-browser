@@ -2,7 +2,10 @@
 
 ## Requirements
 
-For development, you will only need Node.js version ^8.10.0 or ^10.13.0 or >=11.10.1" installed on your environment.
+For development, you will need:
+
+- Node.js version 10.13.0
+- Yarn (optional)
 
 ## Install
 
