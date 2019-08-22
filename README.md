@@ -15,7 +15,7 @@ For development, you will need:
 
 ### Configure app
 
-Copy `config.sample.json` to `config.json` then edit it with the url where you have setup:
+Copy `config.example.json` to `config.json` then edit it with the url where you have setup:
 
 - api url
 - api key
@@ -36,4 +36,4 @@ Copy `config.sample.json` to `config.json` then edit it with the url where you h
 
 ### CSS
 
-_Autoprefixer_ is included and use [caniuse.com](http://caniuse.com/) database to avoid outdated prefixes. _You can forget CSS prefixes NOW._
+- [Styled Components](https://www.styled-components.com) is used for styling

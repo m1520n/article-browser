@@ -14,6 +14,9 @@
 # production
 /build
 
+# config file
+config.json
+
 # misc
 .DS_Store
 .env
