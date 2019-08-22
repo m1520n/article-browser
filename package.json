@@ -17,12 +17,15 @@
     "src/**/*.js": [
       "prettier --write",
       "eslint src/ --fix",
+      "jest src/",
       "git add"
     ]
   },
   "dependencies": {
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2",
+    "styled-normalize": "^8.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -55,7 +58,8 @@
     ],
     "env": {
       "browser": true,
-      "jest/globals": true
+      "jest/globals": true,
+      "es6": true
     },
     "rules": {
       "react/jsx-filename-extension": 0
