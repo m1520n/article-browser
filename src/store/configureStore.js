@@ -1,20 +1,19 @@
 import { configureStore, getDefaultMiddleware } from 'redux-starter-kit';
 import logger from 'redux-logger';
 
-import preloadedState from './preloadedState';
 import { loadState, saveState } from './localStorage';
 
-import articlesReducer from './articlesSlice';
+import articleSlice from './slices/articleSlice';
 
 const persistedState = loadState();
 
 const store = configureStore({
   reducer: {
-    articles: articlesReducer,
+    article: articleSlice,
   },
   middleware: [...getDefaultMiddleware(), logger],
   devTools: process.env.NODE_ENV !== 'production',
-  preloadedState: persistedState || preloadedState,
+  preloadedState: persistedState,
 });
 
 store.subscribe(() => {

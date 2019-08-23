@@ -3,5 +3,12 @@
 exports[`App is rendered correctly 1`] = `
 <div>
   HOME
+   
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    MORE
+  </button>
 </div>
 `;
