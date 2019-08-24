@@ -18,11 +18,10 @@ const articleSlice = createSlice({
     },
     fetchArticlesSuccess: (state, action) => {
       const { payload } = action;
-      const { articles, loadMore, page } = payload;
+      const { articles, loadMore } = payload;
 
       if (loadMore) {
         state.articles.push(...articles);
-        state.page = page;
       } else {
         state.articles = articles;
       }

@@ -1,3 +1,14 @@
 {
-  "API_KEY": "your api key here"
+  "development": {
+    "API_KEY": "developmentKey"
+  },
+  "staging": {
+    "API_KEY": "stageApiKey"
+  },
+  "test": {
+    "API_KEY": "testApiKey"
+  },
+  "production": {
+    "API_KEY": "productionKey"
+  }
 }

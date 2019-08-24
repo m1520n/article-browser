@@ -7,7 +7,7 @@ export const getArticles = (params = { loadMore: false, page: 1 }) => async (dis
 
   try {
     const articles = await fetchArticlesFromApi({ page });
-    return dispatch(fetchArticlesSuccess({ articles, loadMore, page }));
+    return dispatch(fetchArticlesSuccess({ articles, loadMore }));
   } catch (e) {
     return dispatch(fetchArticlesError(e.message));
   }
