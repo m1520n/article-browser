@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Normalize } from 'styled-normalize';
 import { Provider } from 'react-redux';
+
+import GlobalStyles from './styles/globalStyles';
 
 import Home from './containers/Home/Home';
 import Article from './containers/Article/Article';
@@ -11,7 +12,7 @@ import store from './store/configureStore';
 
 const App = () => (
   <Provider store={store}>
-    <Normalize />
+    <GlobalStyles />
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />

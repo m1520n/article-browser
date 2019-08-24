@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import SectionHeader from '../../components/SectionHeader/SectionHeader';
+
 const propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
@@ -11,7 +13,7 @@ const propTypes = {
 
 const Article = ({ match }) => (
   <div>
-Article
+    <SectionHeader sectionName="Article title" />
     {match.params.id}
   </div>
 );

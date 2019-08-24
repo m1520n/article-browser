@@ -2,7 +2,15 @@
 
 exports[`App is rendered correctly 1`] = `
 <div>
-  HOME
+  <header
+    className="sc-bdVaJa bDWFJH"
+  >
+    <h1
+      className="sc-bwzfXH bgtvPU"
+    >
+      HOME
+    </h1>
+  </header>
    
   <button
     onClick={[Function]}

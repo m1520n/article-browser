@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 import { getArticles as getArticlesAction } from '../../store/thunks/articleThunk';
 
+import SectionHeader from '../../components/SectionHeader/SectionHeader';
+
 const propTypes = {
   articles: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   page: PropTypes.number.isRequired,
@@ -20,7 +22,7 @@ const Home = ({ articles, page, getArticles }) => {
   };
   return (
     <div>
-      HOME
+      <SectionHeader sectionName="HOME" />
       {' '}
       {articles && articles.map((article) => <pre key={`${article.publishedAt}`}>{article.content}</pre>)}
       <button type="button" onClick={loadMore}>

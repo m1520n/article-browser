@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionHeader is rendered correctly 1`] = `
+<header
+  className="sc-bdVaJa bDWFJH"
+>
+  <h1
+    className="sc-bwzfXH bgtvPU"
+  >
+    TEST_SECTION
+  </h1>
+</header>
+`;

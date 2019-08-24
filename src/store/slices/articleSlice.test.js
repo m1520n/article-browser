@@ -1,13 +1,18 @@
 // Change the imports to get the action creators
 import articles, { fetchArticles, fetchArticlesSuccess, fetchArticlesError } from './articleSlice';
 
+const baseState = {
+  articles: [],
+  isLoading: false,
+  error: null,
+  page: 1,
+  disableMore: false,
+};
+
 describe('arcticlesSlice', () => {
   test('should handle fetchArticles action', () => {
     const initialState = {
-      articles: [],
-      isLoading: false,
-      error: null,
-      page: 1,
+      ...baseState,
     };
 
     const fetchArticlesAction = articles(initialState, {
@@ -15,43 +20,81 @@ describe('arcticlesSlice', () => {
     });
 
     expect(fetchArticlesAction).toEqual({
-      articles: [],
+      ...baseState,
       isLoading: true,
-      error: null,
-      page: 1,
     });
   });
 
   test('should handle fetchArticlesSuccess action', () => {
     const initialState = {
-      articles: [],
+      ...baseState,
       isLoading: true,
-      error: null,
-      page: 1,
     };
 
     const fetchArticlesSuccessAction = articles(initialState, {
       type: fetchArticlesSuccess.type,
       payload: {
         articles: [{}, {}, {}],
-        page: 1,
       },
     });
 
     expect(fetchArticlesSuccessAction).toEqual({
+      ...baseState,
+      articles: [{}, {}, {}],
+    });
+  });
+
+  test('should handle fetchArticlesSuccess action when loadMore is passed', () => {
+    const initialState = {
+      ...baseState,
+      isLoading: true,
+    };
+
+    const fetchArticlesSuccessAction = articles(initialState, {
+      type: fetchArticlesSuccess.type,
+      payload: {
+        articles: [{}, {}, {}],
+        loadMore: true,
+      },
+    });
+
+    expect(fetchArticlesSuccessAction).toEqual({
+      ...baseState,
       articles: [{}, {}, {}],
       isLoading: false,
-      error: null,
-      page: 1,
+      page: 2,
+    });
+  });
+
+  test('should handle fetchArticlesSuccess action when loadMore is passed and page count exceeds the free account limit', () => {
+    const initialState = {
+      ...baseState,
+      page: 100,
+      isLoading: true,
+    };
+
+    const fetchArticlesSuccessAction = articles(initialState, {
+      type: fetchArticlesSuccess.type,
+      payload: {
+        articles: [{}, {}, {}],
+        page: 100,
+        loadMore: true,
+      },
+    });
+
+    expect(fetchArticlesSuccessAction).toEqual({
+      ...baseState,
+      articles: [{}, {}, {}],
+      isLoading: false,
+      page: 100,
+      disableMore: true,
     });
   });
 
   test('should handle fetchArticlesError action', () => {
     const initialState = {
-      articles: [],
+      ...baseState,
       isLoading: true,
-      error: null,
-      page: 1,
     };
 
     const fetchArticlesErrorAction = articles(initialState, {
@@ -60,10 +103,8 @@ describe('arcticlesSlice', () => {
     });
 
     expect(fetchArticlesErrorAction).toEqual({
-      articles: [],
-      isLoading: false,
+      ...baseState,
       error: 'ERROR!',
-      page: 1,
     });
   });
 });

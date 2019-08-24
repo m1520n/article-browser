@@ -5,6 +5,7 @@ const initialState = {
   isLoading: false,
   error: null,
   page: 1,
+  disableMore: false,
 };
 
 /* eslint-disable no-param-reassign */
@@ -22,6 +23,13 @@ const articleSlice = createSlice({
 
       if (loadMore) {
         state.articles.push(...articles);
+
+        // This is needed because free News API accounts is limited to viewing 100 pages
+        if (state.page + 1 <= 100) {
+          state.page += 1;
+        } else {
+          state.disableMore = true;
+        }
       } else {
         state.articles = articles;
       }
