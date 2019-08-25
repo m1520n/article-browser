@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 
@@ -11,17 +11,26 @@ const propTypes = {
   ).isRequired,
   selectedOption: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
+  isClearable: PropTypes.bool,
+  handleSelect: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   selectedOption: null,
+  isClearable: false,
 };
 
-const DropDown = ({ options, selectedOption, placeholder }) => {
-  const [option, setOption] = useState(selectedOption);
-
-  const handleChange = (selected) => {
-    setOption(selected);
+const DropDown = ({
+  options, selectedOption, placeholder, isClearable, handleSelect,
+}) => {
+  const handleChange = ({ value }) => {
+    let newValue;
+    if (isClearable) {
+      newValue = value === selectedOption ? null : value;
+    } else {
+      newValue = value;
+    }
+    handleSelect(newValue);
   };
 
   const customStyles = {
@@ -64,10 +73,18 @@ const DropDown = ({ options, selectedOption, placeholder }) => {
     }),
   };
 
+  const values = options.reduce(
+    (obj, option) => ({
+      ...obj,
+      [option.value]: option,
+    }),
+    {},
+  );
+
   return (
     <Select
       styles={customStyles}
-      value={option}
+      value={values[selectedOption] || null}
       onChange={handleChange}
       options={options}
       placeholder={placeholder}

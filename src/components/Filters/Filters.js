@@ -4,13 +4,19 @@ import PropTypes from 'prop-types';
 import DropDown from '../DropDown/DropDown';
 import Button from '../Button/Button';
 
-import { FiltersWrapper, DropDownWrapper, StyledDropdown } from './Filters.style';
+import { FiltersWrapper, DropDownWrapper } from './Filters.style';
 
 const propTypes = {
-  handleClear: PropTypes.func.isRequired,
+  filterValues: PropTypes.shape({
+    time: PropTypes.string,
+    popularity: PropTypes.string,
+    topic: PropTypes.string,
+  }).isRequired,
+  handleClearFilters: PropTypes.func.isRequired,
+  handleUpdateFilter: PropTypes.func.isRequired,
 };
 
-const Filters = ({ handleClear }) => {
+const Filters = ({ filterValues, handleClearFilters, handleUpdateFilter }) => {
   const topicOptions = [
     { value: 'tech', label: 'Technology' },
     { value: 'travel', label: 'Travel' },
@@ -27,15 +33,37 @@ const Filters = ({ handleClear }) => {
     { value: 'today', label: 'Today' },
   ];
 
+  const updateFilter = (key) => (value) => {
+    handleUpdateFilter({ key, value });
+  };
+
   return (
     <FiltersWrapper>
       <DropDownWrapper>
-        <StyledDropdown isClearable options={topicOptions} placeholder="Topic" />
-        <DropDown isClearable options={sortByOptions} placeholder="Time" />
-        <DropDown isClearable options={dateOptions} placeholder="Popularity" />
+        <DropDown
+          isClearable
+          options={topicOptions}
+          placeholder="Topic"
+          handleSelect={updateFilter('topic')}
+          selectedOption={filterValues.topic}
+        />
+        <DropDown
+          isClearable
+          options={sortByOptions}
+          placeholder="Time"
+          handleSelect={updateFilter('time')}
+          selectedOption={filterValues.time}
+        />
+        <DropDown
+          isClearable
+          options={dateOptions}
+          placeholder="Popularity"
+          handleSelect={updateFilter('popularity')}
+          selectedOption={filterValues.popularity}
+        />
       </DropDownWrapper>
 
-      <Button type="secondary" size="small" handleClick={handleClear}>
+      <Button type="secondary" size="small" handleClick={handleClearFilters}>
         Clear Filters
       </Button>
     </FiltersWrapper>

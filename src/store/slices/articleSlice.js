@@ -6,6 +6,11 @@ const initialState = {
   error: null,
   page: 1,
   disableMore: false,
+  filterValues: {
+    time: null,
+    topic: null,
+    popularity: null,
+  },
 };
 
 /* eslint-disable no-param-reassign */
@@ -39,11 +44,31 @@ const articleSlice = createSlice({
       state.error = action.payload;
       state.isLoading = false;
     },
+    updateArticleFilter: (state, action) => {
+      state.filterValues[action.payload.key] = action.payload.value;
+    },
+    clearArticleFilters: (state) => {
+      const nulledFilters = Object.keys(state.filterValues).reduce(
+        (obj, key) => ({
+          ...obj,
+          [key]: null,
+        }),
+        {},
+      );
+
+      state.filterValues = nulledFilters;
+    },
   },
 });
 /* eslint-enable no-param-reassign */
 
 const { actions, reducer } = articleSlice;
-export const { fetchArticles, fetchArticlesSuccess, fetchArticlesError } = actions;
+export const {
+  fetchArticles,
+  fetchArticlesSuccess,
+  fetchArticlesError,
+  updateArticleFilter,
+  clearArticleFilters,
+} = actions;
 
 export default reducer;

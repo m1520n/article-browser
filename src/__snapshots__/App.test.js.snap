@@ -2,7 +2,7 @@
 
 exports[`App is rendered correctly 1`] = `
 <main
-  className="sc-jzJRlG gMxaLJ"
+  className="sc-fjdhpX gNwOKf"
 >
   <header
     className="sc-bdVaJa bDWFJH"
@@ -14,7 +14,7 @@ exports[`App is rendered correctly 1`] = `
     </h1>
   </header>
   <nav
-    className="sc-bxivhb foxuXH"
+    className="sc-bxivhb hoauFo"
   >
     <div
       className="sc-ifAKCX WOpjk"
@@ -340,7 +340,7 @@ exports[`App is rendered correctly 1`] = `
     </button>
   </nav>
   <div
-    className="sc-bZQynM bxGChx"
+    className="sc-EHOje bTLlFS"
   />
   <button
     className="sc-htpNat dVlQbk"

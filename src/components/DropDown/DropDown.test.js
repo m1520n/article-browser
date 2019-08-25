@@ -10,7 +10,9 @@ test('DropDown is rendered correctly', () => {
     { value: 'mouse', label: 'Mouse' },
   ];
 
-  const component = renderer.create(<DropDown options={options} placeholder="Select animal..." />);
+  const component = renderer.create(
+    <DropDown options={options} placeholder="Select animal..." handleSelect={() => {}} />,
+  );
 
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
