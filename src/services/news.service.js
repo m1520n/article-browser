@@ -2,9 +2,7 @@ import fetch from 'unfetch';
 
 import config from '../../config';
 
-const { API_KEY } = config[process.env.NODE_ENV];
-
-const apiUrl = 'https://newsapi.org/v2/';
+const { API_KEY, API_URL } = config[process.env.NODE_ENV];
 
 export const fetchArticles = async ({
   category,
@@ -28,7 +26,7 @@ export const fetchArticles = async ({
 
     const queryParamsString = Object.values(queryParamsDict).join('');
 
-    const response = await fetchFn(`${apiUrl}everything?apiKey=${API_KEY}${queryParamsString}`);
+    const response = await fetchFn(`${API_URL}everything?apiKey=${API_KEY}${queryParamsString}`);
     const { status, articles, message } = await response.json();
 
     if (status !== 'ok') throw new Error(message);

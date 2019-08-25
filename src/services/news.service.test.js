@@ -16,7 +16,7 @@ describe('fetchArticles', () => {
     });
 
     expect(fetchMock).toHaveBeenCalledWith(
-      'https://newsapi.org/v2/everything?apiKey=testApiKey&q=sport&from=2018-09-20&to=2019-10-20',
+      'http://test-api-url.com/api/everything?apiKey=testApiKey&q=sport&from=2018-09-20&to=2019-10-20',
     );
   });
 

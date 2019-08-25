@@ -1,14 +1,18 @@
 {
   "development": {
-    "API_KEY": "developmentKey"
+    "API_KEY": "developmentKey",
+    "API_URL": "apiUrl"
   },
   "staging": {
-    "API_KEY": "stageApiKey"
+    "API_KEY": "stageApiKey",
+    "API_URL": "apiUrl"
   },
   "test": {
-    "API_KEY": "testApiKey"
+    "API_KEY": "testApiKey",
+    "API_URL": "http://test-api-url.com/api/"
   },
   "production": {
-    "API_KEY": "productionKey"
+    "API_KEY": "productionKey",
+    "API_URL": "apiUrl"
   }
 }
