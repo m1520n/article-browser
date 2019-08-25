@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getArticles as getArticlesAction } from '../../store/thunks/articleThunk';
 
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
+import Filters from '../../components/Filters/Filters';
 import ArticleList from '../../components/ArticlesList/ArticlesList';
 
 import Button from '../../components/Button/Button';
@@ -26,9 +27,15 @@ const Home = ({
   const loadMore = () => {
     getArticles({ loadMore: true, page: page + 1 });
   };
+
+  const handleClearFilters = () => {
+    console.log('CLEARED!');
+  };
+
   return (
     <>
       <SectionHeader sectionName="HOME" />
+      <Filters handleClear={handleClearFilters} />
       <ArticleList articles={articles} />
       <Button type="secondary" disabled={articlesLoading} handleClick={loadMore}>
         {articlesLoading ? 'Loading...' : 'Load More'}

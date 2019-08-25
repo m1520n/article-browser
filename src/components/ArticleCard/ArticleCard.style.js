@@ -8,7 +8,7 @@ export const ArticleCardWrapper = styled.div`
   flex: 0 1 30%;
   width: 37rem;
   font-family: ${fonts.arialMT};
-  margin: 2.6rem 2.7rem 1.7rem 0;
+  margin: 2.6rem 0 1.7rem;
 
   @media ${breakpoints.tablet} {
     flex: 1;

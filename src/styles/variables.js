@@ -6,6 +6,7 @@ export const colors = {
   royalBlue: '#493BE1',
   sapphire: '#3022C8',
   blackish: '#606060',
+  brightTurquoise: '#DCDCDC',
 };
 
 export const fonts = {
