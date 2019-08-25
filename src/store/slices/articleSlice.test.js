@@ -1,5 +1,11 @@
 // Change the imports to get the action creators
-import articles, { fetchArticles, fetchArticlesSuccess, fetchArticlesError } from './articleSlice';
+import articles, {
+  fetchArticles,
+  fetchArticlesSuccess,
+  fetchArticlesError,
+  updateArticleFilter,
+  clearArticleFilters,
+} from './articleSlice';
 
 const baseState = {
   articles: [],
@@ -7,6 +13,11 @@ const baseState = {
   error: null,
   page: 1,
   disableMore: false,
+  filterValues: {
+    time: null,
+    topic: null,
+    sortBy: null,
+  },
 };
 
 describe('arcticlesSlice', () => {
@@ -105,6 +116,57 @@ describe('arcticlesSlice', () => {
     expect(fetchArticlesErrorAction).toEqual({
       ...baseState,
       error: 'ERROR!',
+    });
+  });
+
+  test('should handle updateArticleFilter action', () => {
+    const initialState = {
+      ...baseState,
+    };
+
+    const updateArticleFilterAction = articles(initialState, {
+      type: updateArticleFilter.type,
+      payload: {
+        value: 'politics',
+        key: 'topic',
+      },
+    });
+
+    expect(updateArticleFilterAction).toEqual({
+      ...baseState,
+      filterValues: {
+        time: null,
+        topic: 'politics',
+        sortBy: null,
+      },
+    });
+  });
+
+  test('should handle clearArticleFilters action', () => {
+    const initialState = {
+      ...baseState,
+      filterValues: {
+        time: 'week',
+        topic: 'politics',
+        sortBy: 'popularity',
+      },
+    };
+
+    const clearArticleFiltersAction = articles(initialState, {
+      type: clearArticleFilters.type,
+      payload: {
+        value: 'politics',
+        key: 'topic',
+      },
+    });
+
+    expect(clearArticleFiltersAction).toEqual({
+      ...baseState,
+      filterValues: {
+        time: null,
+        topic: null,
+        sortBy: null,
+      },
     });
   });
 });

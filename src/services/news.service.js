@@ -7,11 +7,11 @@ const { API_KEY } = config[process.env.NODE_ENV];
 const apiUrl = 'https://newsapi.org/v2/';
 
 export const fetchArticles = async ({
-  category = 'travel',
+  category,
   from,
   to,
   sortBy,
-  pageSize = 6,
+  pageSize,
   page,
   fetchFn = fetch,
 } = {}) => {

@@ -9,7 +9,7 @@ const initialState = {
   filterValues: {
     time: null,
     topic: null,
-    popularity: null,
+    sortBy: null,
   },
 };
 

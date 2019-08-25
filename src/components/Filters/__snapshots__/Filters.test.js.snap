@@ -12,7 +12,7 @@ exports[`Filters is rendered correctly 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-bby9sa-control"
+        className=" css-1yok61r-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -83,10 +83,10 @@ exports[`Filters is rendered correctly 1`] = `
           </div>
         </div>
         <div
-          className=" css-1iftv44-IndicatorsContainer"
+          className=" css-1g48xl4-IndicatorsContainer"
         >
           <span
-            className=" css-1okebmr-indicatorSeparator"
+            className=" css-1b2md6i-indicatorSeparator"
           />
           <div
             aria-hidden="true"
@@ -115,7 +115,7 @@ exports[`Filters is rendered correctly 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-bby9sa-control"
+        className=" css-1yok61r-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -186,10 +186,10 @@ exports[`Filters is rendered correctly 1`] = `
           </div>
         </div>
         <div
-          className=" css-1iftv44-IndicatorsContainer"
+          className=" css-1g48xl4-IndicatorsContainer"
         >
           <span
-            className=" css-1okebmr-indicatorSeparator"
+            className=" css-1b2md6i-indicatorSeparator"
           />
           <div
             aria-hidden="true"
@@ -218,7 +218,7 @@ exports[`Filters is rendered correctly 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-bby9sa-control"
+        className=" css-1yok61r-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -228,7 +228,7 @@ exports[`Filters is rendered correctly 1`] = `
           <div
             className=" css-1wa3eu0-placeholder"
           >
-            Popularity
+            Sort by
           </div>
           <div
             className="css-w8afj7-Input"
@@ -289,10 +289,10 @@ exports[`Filters is rendered correctly 1`] = `
           </div>
         </div>
         <div
-          className=" css-1iftv44-IndicatorsContainer"
+          className=" css-1g48xl4-IndicatorsContainer"
         >
           <span
-            className=" css-1okebmr-indicatorSeparator"
+            className=" css-1b2md6i-indicatorSeparator"
           />
           <div
             aria-hidden="true"

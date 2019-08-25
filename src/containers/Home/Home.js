@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { startOfWeek, startOfMonth, startOfToday } from 'date-fns';
 
 import { getArticles as getArticlesAction } from '../../store/thunks/articleThunk';
 import {
@@ -21,7 +22,7 @@ const propTypes = {
   filterValues: PropTypes.shape({
     time: PropTypes.string,
     topic: PropTypes.string,
-    popularity: PropTypes.string,
+    sortBy: PropTypes.string,
   }).isRequired,
   getArticles: PropTypes.func.isRequired,
   clearArticleFilters: PropTypes.func.isRequired,
@@ -37,12 +38,31 @@ const Home = ({
   clearArticleFilters,
   updateArticleFilter,
 }) => {
+  const { topic, time, sortBy } = filterValues;
+
+  // TODO: move to utility function
+  const dateDict = {
+    today: startOfToday(),
+    month: startOfMonth(Date.now()),
+    week: startOfWeek(Date.now()),
+  };
+
   useEffect(() => {
-    getArticles();
+    getArticles({
+      ...(topic ? { category: topic } : {}),
+      ...(time ? { from: dateDict[time] } : {}),
+      ...(sortBy ? { sortBy } : {}),
+    });
   }, [getArticles]);
 
   const loadMore = () => {
-    getArticles({ loadMore: true, page: page + 1 });
+    getArticles({
+      loadMore: true,
+      page: page + 1,
+      ...(topic ? { category: topic } : {}),
+      ...(time ? { from: dateDict[time] } : {}),
+      ...(sortBy ? { sortBy } : {}),
+    });
   };
 
   const handleUpdateFilter = ({ key, value }) => {

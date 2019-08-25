@@ -9,7 +9,7 @@ import { FiltersWrapper, DropDownWrapper } from './Filters.style';
 const propTypes = {
   filterValues: PropTypes.shape({
     time: PropTypes.string,
-    popularity: PropTypes.string,
+    sortBy: PropTypes.string,
     topic: PropTypes.string,
   }).isRequired,
   handleClearFilters: PropTypes.func.isRequired,
@@ -57,9 +57,9 @@ const Filters = ({ filterValues, handleClearFilters, handleUpdateFilter }) => {
         <DropDown
           isClearable
           options={dateOptions}
-          placeholder="Popularity"
-          handleSelect={updateFilter('popularity')}
-          selectedOption={filterValues.popularity}
+          placeholder="Sort by"
+          handleSelect={updateFilter('sortBy')}
+          selectedOption={filterValues.sortBy}
         />
       </DropDownWrapper>
 

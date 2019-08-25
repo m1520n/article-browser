@@ -7,7 +7,7 @@ import DropDown from '../DropDown/DropDown';
 
 const filterValues = {
   time: null,
-  popularity: null,
+  sortBy: null,
   publishedAt: null,
 };
 
