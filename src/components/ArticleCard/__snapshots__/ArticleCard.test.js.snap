@@ -2,44 +2,43 @@
 
 exports[`ArticleCard is rendered correctly 1`] = `
 <div
-  className="sc-bwzfXH eCpiSA"
+  className="sc-bwzfXH hwPgcX"
 >
-  <img
+  <div
     alt="TITLE"
-    className="sc-htpNat kYYnJn"
-    src="URL"
+    className="sc-htpNat eLZMyj"
   />
   <div
-    className="sc-bZQynM bOrPFB"
+    className="sc-bZQynM bdZCbq"
   >
     <span
-      className="sc-gzVnrw ibZhkv"
+      className="sc-gzVnrw lFPpP"
     >
-      PUBLISHED_AT
+      Aug 10 2019
     </span>
     <span
-      className="sc-htoDjs bZzhDu"
+      className="sc-htoDjs bhWAGR"
     >
       AUTHOR
     </span>
     <a
-      className="sc-dnqmqq bDsesi"
+      className="sc-dnqmqq JTDYf"
     >
       NAME
     </a>
   </div>
   <h2
-    className="sc-bxivhb fMjCsj"
+    className="sc-bxivhb ladvwN"
   >
     TITLE
   </h2>
   <p
-    className="sc-ifAKCX RpBfz"
+    className="sc-ifAKCX icdYMR"
   >
     CONTENT
   </p>
   <button
-    className="sc-bdVaJa cRgkqR"
+    className="sc-bdVaJa doiMwP"
     disabled={false}
     onClick={[Function]}
     size="regular"

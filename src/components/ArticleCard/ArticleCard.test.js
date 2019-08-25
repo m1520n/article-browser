@@ -9,7 +9,7 @@ test('ArticleCard is rendered correctly', () => {
     author: 'AUTHOR',
     urlToImage: 'URL',
     title: 'TITLE',
-    publishedAt: 'PUBLISHED_AT',
+    publishedAt: '2019-08-10T12:00:00Z',
     source: {
       name: 'NAME',
     },

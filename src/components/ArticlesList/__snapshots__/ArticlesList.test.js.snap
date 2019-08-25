@@ -5,38 +5,38 @@ exports[`ArticlesList is rendered correctly 1`] = `
   className="sc-bdVaJa glwcuW"
 >
   <div
-    className="sc-htpNat cxRAlP"
+    className="sc-htpNat iYKwvf"
   >
-    <img
-      className="sc-bxivhb kvrELs"
+    <div
+      className="sc-bxivhb hOjknm"
     />
     <div
-      className="sc-gzVnrw ibZhkv"
+      className="sc-gzVnrw uGeRG"
     >
       <span
-        className="sc-htoDjs bZzhDu"
+        className="sc-htoDjs gaFIfX"
       >
-        2018-08-26
+        Aug 26 2018
       </span>
       <span
-        className="sc-dnqmqq bDsesi"
+        className="sc-dnqmqq fUSNBF"
       >
         Dan Abramov
       </span>
       <a
-        className="sc-iwsKbI jQhHGA"
+        className="sc-iwsKbI hLNtPO"
       >
         Medium
       </a>
     </div>
     <h2
-      className="sc-ifAKCX jCBLlB"
+      className="sc-ifAKCX lejNoY"
     />
     <p
-      className="sc-EHOje eeIvSG"
+      className="sc-EHOje htbPhC"
     />
     <button
-      className="sc-bwzfXH bfybiA"
+      className="sc-bwzfXH jZqDKj"
       disabled={false}
       onClick={[Function]}
       size="regular"
@@ -46,38 +46,38 @@ exports[`ArticlesList is rendered correctly 1`] = `
     </button>
   </div>
   <div
-    className="sc-htpNat cxRAlP"
+    className="sc-htpNat iYKwvf"
   >
-    <img
-      className="sc-bxivhb kvrELs"
+    <div
+      className="sc-bxivhb hOjknm"
     />
     <div
-      className="sc-gzVnrw ibZhkv"
+      className="sc-gzVnrw uGeRG"
     >
       <span
-        className="sc-htoDjs bZzhDu"
+        className="sc-htoDjs gaFIfX"
       >
-        2019-01-23
+        Jan 23 2019
       </span>
       <span
-        className="sc-dnqmqq bDsesi"
+        className="sc-dnqmqq fUSNBF"
       >
         Kyle Simpson
       </span>
       <a
-        className="sc-iwsKbI jQhHGA"
+        className="sc-iwsKbI hLNtPO"
       >
         HackerNoon
       </a>
     </div>
     <h2
-      className="sc-ifAKCX jCBLlB"
+      className="sc-ifAKCX lejNoY"
     />
     <p
-      className="sc-EHOje eeIvSG"
+      className="sc-EHOje htbPhC"
     />
     <button
-      className="sc-bwzfXH bfybiA"
+      className="sc-bwzfXH jZqDKj"
       disabled={false}
       onClick={[Function]}
       size="regular"
@@ -87,38 +87,38 @@ exports[`ArticlesList is rendered correctly 1`] = `
     </button>
   </div>
   <div
-    className="sc-htpNat cxRAlP"
+    className="sc-htpNat iYKwvf"
   >
-    <img
-      className="sc-bxivhb kvrELs"
+    <div
+      className="sc-bxivhb hOjknm"
     />
     <div
-      className="sc-gzVnrw ibZhkv"
+      className="sc-gzVnrw uGeRG"
     >
       <span
-        className="sc-htoDjs bZzhDu"
+        className="sc-htoDjs gaFIfX"
       >
-        2018-03-23
+        Mar 23 2018
       </span>
       <span
-        className="sc-dnqmqq bDsesi"
+        className="sc-dnqmqq fUSNBF"
       >
         Douglas Crockford
       </span>
       <a
-        className="sc-iwsKbI jQhHGA"
+        className="sc-iwsKbI hLNtPO"
       >
         Medium
       </a>
     </div>
     <h2
-      className="sc-ifAKCX jCBLlB"
+      className="sc-ifAKCX lejNoY"
     />
     <p
-      className="sc-EHOje eeIvSG"
+      className="sc-EHOje htbPhC"
     />
     <button
-      className="sc-bwzfXH bfybiA"
+      className="sc-bwzfXH jZqDKj"
       disabled={false}
       onClick={[Function]}
       size="regular"

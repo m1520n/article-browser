@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { format, parseISO } from 'date-fns';
 
 import {
   ArticleCardWrapper,
@@ -28,9 +29,9 @@ const propTypes = {
 
 const ArticleCard = ({ article }) => (
   <ArticleCardWrapper>
-    <CoverImage alt={article.title} src={article.urlToImage} />
+    <CoverImage alt={article.title} url={article.urlToImage} />
     <CardGroup>
-      <Date>{article.publishedAt}</Date>
+      <Date>{format(parseISO(article.publishedAt), 'MMM dd yyyy')}</Date>
       <Author>{article.author}</Author>
       <Source>{article.source.name}</Source>
     </CardGroup>

@@ -5,6 +5,7 @@ export const colors = {
   darkSlate: '#465252',
   royalBlue: '#493BE1',
   sapphire: '#3022C8',
+  blackish: '#606060',
 };
 
 export const fonts = {
@@ -12,7 +13,7 @@ export const fonts = {
 };
 
 export const breakpoints = {
-  mobile: '(max-width: 767px)',
-  tablet: '(min-width: 768px)',
+  mobile: '(max-width: 899px)',
+  tablet: '(max-width: 1279px)',
   desktop: '(min-width: 1280px)',
 };

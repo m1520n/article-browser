@@ -22,6 +22,7 @@ export const ButtonWrapper = styled.button`
   cursor: pointer;
   font-family: ${fonts.arialMT};
   font-size: 1.4rem;
+  line-height: ${({ size }) => sizes[size].height};
   width: ${({ size }) => sizes[size].width};
   ${({ block }) => block && 'width: 100%;'}
   height: ${({ size }) => sizes[size].height};

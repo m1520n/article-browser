@@ -17,7 +17,7 @@ exports[`App is rendered correctly 1`] = `
     className="sc-htpNat fxlWKx"
   />
   <button
-    className="sc-bxivhb cqhGxB"
+    className="sc-bxivhb jEswXB"
     disabled={false}
     onClick={[Function]}
     size="regular"
