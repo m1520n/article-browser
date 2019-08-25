@@ -5,7 +5,7 @@ exports[`SectionHeader is rendered correctly 1`] = `
   className="sc-bdVaJa bDWFJH"
 >
   <h1
-    className="sc-bwzfXH bgtvPU"
+    className="sc-bwzfXH irJftg"
   >
     TEST_SECTION
   </h1>

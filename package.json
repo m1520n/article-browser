@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development parcel public/index.html --open",
-    "build": "rm -rf .cache && rm -rf dist && parcel build ./public/index.html --public-url ./",
+    "build": "rm -rf .cache && rm -rf dist && parcel build public/index.html --public-url ./",
     "test": "NODE_ENV=test jest",
     "lint": "eslint src/**/*.js",
     "prettify": "prettier --write src/**/*.js"
@@ -20,6 +20,10 @@
       "jest src/",
       "git add"
     ]
+  },
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -53,6 +57,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.2.3",
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.2.1",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0"
   },

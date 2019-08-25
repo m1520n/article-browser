@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticlesList is rendered correctly 1`] = `
+<div
+  className="sc-bdVaJa glwcuW"
+>
+  <div
+    className="sc-htpNat cxRAlP"
+  >
+    <img
+      className="sc-bxivhb kvrELs"
+    />
+    <div
+      className="sc-gzVnrw ibZhkv"
+    >
+      <span
+        className="sc-htoDjs bZzhDu"
+      >
+        2018-08-26
+      </span>
+      <span
+        className="sc-dnqmqq bDsesi"
+      >
+        Dan Abramov
+      </span>
+      <a
+        className="sc-iwsKbI jQhHGA"
+      >
+        Medium
+      </a>
+    </div>
+    <h2
+      className="sc-ifAKCX jCBLlB"
+    />
+    <p
+      className="sc-EHOje eeIvSG"
+    />
+    <button
+      className="sc-bwzfXH bfybiA"
+      disabled={false}
+      onClick={[Function]}
+      size="regular"
+      type="primary"
+    >
+      Read More
+    </button>
+  </div>
+  <div
+    className="sc-htpNat cxRAlP"
+  >
+    <img
+      className="sc-bxivhb kvrELs"
+    />
+    <div
+      className="sc-gzVnrw ibZhkv"
+    >
+      <span
+        className="sc-htoDjs bZzhDu"
+      >
+        2019-01-23
+      </span>
+      <span
+        className="sc-dnqmqq bDsesi"
+      >
+        Kyle Simpson
+      </span>
+      <a
+        className="sc-iwsKbI jQhHGA"
+      >
+        HackerNoon
+      </a>
+    </div>
+    <h2
+      className="sc-ifAKCX jCBLlB"
+    />
+    <p
+      className="sc-EHOje eeIvSG"
+    />
+    <button
+      className="sc-bwzfXH bfybiA"
+      disabled={false}
+      onClick={[Function]}
+      size="regular"
+      type="primary"
+    >
+      Read More
+    </button>
+  </div>
+  <div
+    className="sc-htpNat cxRAlP"
+  >
+    <img
+      className="sc-bxivhb kvrELs"
+    />
+    <div
+      className="sc-gzVnrw ibZhkv"
+    >
+      <span
+        className="sc-htoDjs bZzhDu"
+      >
+        2018-03-23
+      </span>
+      <span
+        className="sc-dnqmqq bDsesi"
+      >
+        Douglas Crockford
+      </span>
+      <a
+        className="sc-iwsKbI jQhHGA"
+      >
+        Medium
+      </a>
+    </div>
+    <h2
+      className="sc-ifAKCX jCBLlB"
+    />
+    <p
+      className="sc-EHOje eeIvSG"
+    />
+    <button
+      className="sc-bwzfXH bfybiA"
+      disabled={false}
+      onClick={[Function]}
+      size="regular"
+      type="primary"
+    >
+      Read More
+    </button>
+  </div>
+</div>
+`;

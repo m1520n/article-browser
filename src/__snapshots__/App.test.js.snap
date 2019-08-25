@@ -1,22 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App is rendered correctly 1`] = `
-<div>
+<main
+  className="sc-VigVT ckauSh"
+>
   <header
     className="sc-bdVaJa bDWFJH"
   >
     <h1
-      className="sc-bwzfXH bgtvPU"
+      className="sc-bwzfXH irJftg"
     >
       HOME
     </h1>
   </header>
-   
+  <div
+    className="sc-htpNat fxlWKx"
+  />
   <button
+    className="sc-bxivhb cqhGxB"
+    disabled={false}
     onClick={[Function]}
-    type="button"
+    size="regular"
+    type="secondary"
   >
-    MORE
+    Load More
   </button>
-</div>
+</main>
 `;

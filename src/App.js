@@ -7,19 +7,22 @@ import GlobalStyles from './styles/globalStyles';
 import Home from './containers/Home/Home';
 import Article from './containers/Article/Article';
 import NotFound from './containers/NotFound/NotFound';
+import Layout from './components/Layout/Layout';
 
 import store from './store/configureStore';
 
 const App = () => (
   <Provider store={store}>
     <GlobalStyles />
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/articles/:id" component={Article} />
-        <Route path="*" component={NotFound} />
-      </Switch>
-    </Router>
+    <Layout>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/articles/:id" component={Article} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </Router>
+    </Layout>
   </Provider>
 );
 

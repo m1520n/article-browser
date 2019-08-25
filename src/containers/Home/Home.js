@@ -5,14 +5,20 @@ import { connect } from 'react-redux';
 import { getArticles as getArticlesAction } from '../../store/thunks/articleThunk';
 
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
+import ArticleList from '../../components/ArticlesList/ArticlesList';
+
+import Button from '../../components/Button/Button';
 
 const propTypes = {
   articles: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   page: PropTypes.number.isRequired,
+  articlesLoading: PropTypes.bool.isRequired,
   getArticles: PropTypes.func.isRequired,
 };
 
-const Home = ({ articles, page, getArticles }) => {
+const Home = ({
+  articles, page, getArticles, articlesLoading,
+}) => {
   useEffect(() => {
     getArticles();
   }, [getArticles]);
@@ -21,14 +27,13 @@ const Home = ({ articles, page, getArticles }) => {
     getArticles({ loadMore: true, page: page + 1 });
   };
   return (
-    <div>
+    <>
       <SectionHeader sectionName="HOME" />
-      {' '}
-      {articles && articles.map((article) => <pre key={`${article.publishedAt}`}>{article.content}</pre>)}
-      <button type="button" onClick={loadMore}>
-        MORE
-      </button>
-    </div>
+      <ArticleList articles={articles} />
+      <Button type="secondary" disabled={articlesLoading} handleClick={loadMore}>
+        {articlesLoading ? 'Loading...' : 'Load More'}
+      </Button>
+    </>
   );
 };
 
@@ -36,6 +41,7 @@ Home.propTypes = propTypes;
 
 const mapStateToProps = ({ article }) => ({
   articles: article.articles,
+  articlesLoading: article.isLoading,
   page: article.page,
 });
 

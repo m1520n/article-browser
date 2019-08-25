@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout is rendered correctly 1`] = `
+<main
+  className="sc-bdVaJa dEBSQn"
+>
+  <div>
+    <h1>
+      TEST
+    </h1>
+  </div>
+</main>
+`;

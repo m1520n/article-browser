@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleCard is rendered correctly 1`] = `
+<div
+  className="sc-bwzfXH eCpiSA"
+>
+  <img
+    alt="TITLE"
+    className="sc-htpNat kYYnJn"
+    src="URL"
+  />
+  <div
+    className="sc-bZQynM bOrPFB"
+  >
+    <span
+      className="sc-gzVnrw ibZhkv"
+    >
+      PUBLISHED_AT
+    </span>
+    <span
+      className="sc-htoDjs bZzhDu"
+    >
+      AUTHOR
+    </span>
+    <a
+      className="sc-dnqmqq bDsesi"
+    >
+      NAME
+    </a>
+  </div>
+  <h2
+    className="sc-bxivhb fMjCsj"
+  >
+    TITLE
+  </h2>
+  <p
+    className="sc-ifAKCX RpBfz"
+  >
+    CONTENT
+  </p>
+  <button
+    className="sc-bdVaJa cRgkqR"
+    disabled={false}
+    onClick={[Function]}
+    size="regular"
+    type="primary"
+  >
+    Read More
+  </button>
+</div>
+`;
