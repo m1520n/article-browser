@@ -1,6 +1,6 @@
 {
   "development": {
-    "API_KEY": "developmentKey",
+    "API_KEY": "https://newsapi.org/v2/",
     "API_URL": "apiUrl"
   },
   "staging": {
@@ -12,7 +12,7 @@
     "API_URL": "http://test-api-url.com/api/"
   },
   "production": {
-    "API_KEY": "productionKey",
+    "API_KEY": "https://newsapi.org/v2/",
     "API_URL": "apiUrl"
   }
 }
