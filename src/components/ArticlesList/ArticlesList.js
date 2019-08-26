@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ArticlesListWrapper } from './ArticlesList.style';
+import { ArticlesListWrapper, NoResults } from './ArticlesList.style';
 
 import ArticleCard from '../ArticleCard/ArticleCard';
 
@@ -18,13 +18,24 @@ const propTypes = {
       }),
     }),
   ).isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  handleCTA: PropTypes.func.isRequired,
 };
 
-const ArticlesList = ({ articles }) => (
+const renderNoResults = isLoading =>
+  !isLoading && <NoResults>No Results - try different filter settings</NoResults>;
+
+const ArticlesList = ({ articles, isLoading, handleCTA }) => (
   <ArticlesListWrapper>
-    {articles.map((article) => (
-      <ArticleCard article={article} key={`${article.author}-${article.publishedAt}`} />
-    ))}
+    {articles.length
+      ? articles.map(article => (
+        <ArticleCard
+          article={article}
+          key={`${article.author}-${article.publishedAt}`}
+          handleCTA={handleCTA}
+        />
+        ))
+      : renderNoResults(isLoading)}
   </ArticlesListWrapper>
 );
 

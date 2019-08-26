@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 import DropDown from '../DropDown/DropDown';
 
 const filterValues = {
-  time: null,
+  from: null,
   sortBy: null,
   publishedAt: null,
 };

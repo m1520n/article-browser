@@ -7,7 +7,7 @@ const initialState = {
   page: 1,
   disableMore: false,
   filterValues: {
-    time: null,
+    from: null,
     topic: null,
     sortBy: null,
   },
@@ -18,7 +18,7 @@ const articleSlice = createSlice({
   slice: 'article',
   initialState,
   reducers: {
-    fetchArticles: (state) => {
+    fetchArticles: state => {
       state.error = null;
       state.isLoading = true;
     },
@@ -47,7 +47,7 @@ const articleSlice = createSlice({
     updateArticleFilter: (state, action) => {
       state.filterValues[action.payload.key] = action.payload.value;
     },
-    clearArticleFilters: (state) => {
+    clearArticleFilters: state => {
       const nulledFilters = Object.keys(state.filterValues).reduce(
         (obj, key) => ({
           ...obj,

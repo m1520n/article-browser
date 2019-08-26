@@ -9,7 +9,7 @@ import {
   CardText,
   ReadMoreButton,
   CardGroup,
-  Date,
+  BaseText,
   Author,
   Source,
 } from './ArticleCard.style';
@@ -17,6 +17,7 @@ import {
 const propTypes = {
   article: PropTypes.shape({
     content: PropTypes.string,
+    url: PropTypes.string,
     urlToImage: PropTypes.string,
     title: PropTypes.string,
     publishedAt: PropTypes.string,
@@ -25,19 +26,24 @@ const propTypes = {
       name: PropTypes.string,
     }),
   }).isRequired,
+  handleCTA: PropTypes.func.isRequired,
 };
 
-const ArticleCard = ({ article }) => (
+const ArticleCard = ({ article, handleCTA }) => (
   <ArticleCardWrapper>
     <CoverImage alt={article.title} url={article.urlToImage} />
     <CardGroup>
-      <Date>{format(parseISO(article.publishedAt), 'MMM dd yyyy')}</Date>
+      <BaseText>{format(parseISO(article.publishedAt), 'MMM dd yyyy')}</BaseText>
       <Author>{article.author}</Author>
-      <Source>{article.source.name}</Source>
+      <Source href={article.url} target="_blank" rel="noopener noreferrer">
+        {article.source.name}
+      </Source>
     </CardGroup>
     <CardTitle>{article.title}</CardTitle>
     <CardText>{article.content}</CardText>
-    <ReadMoreButton block>Read More</ReadMoreButton>
+    <ReadMoreButton block handleClick={() => handleCTA(article)}>
+      Read More
+    </ReadMoreButton>
   </ArticleCardWrapper>
 );
 

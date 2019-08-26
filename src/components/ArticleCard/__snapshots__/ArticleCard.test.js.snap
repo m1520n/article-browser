@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleCard is rendered correctly 1`] = `
+exports[`should render ArticleCard correctly 1`] = `
 <div
-  className="sc-bwzfXH dhGWof"
+  className="sc-bwzfXH egPcon"
 >
   <div
     alt="TITLE"
-    className="sc-htpNat eLZMyj"
+    className="sc-htpNat jXHKvM"
   />
   <div
     className="sc-bZQynM bdZCbq"
@@ -17,12 +17,14 @@ exports[`ArticleCard is rendered correctly 1`] = `
       Aug 10 2019
     </span>
     <span
-      className="sc-htoDjs bhWAGR"
+      className="sc-gzVnrw sc-htoDjs bpBiuV"
     >
       AUTHOR
     </span>
     <a
-      className="sc-dnqmqq JTDYf"
+      className="sc-dnqmqq fTZfxW"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       NAME
     </a>
@@ -38,7 +40,7 @@ exports[`ArticleCard is rendered correctly 1`] = `
     CONTENT
   </p>
   <button
-    className="sc-bdVaJa doiMwP"
+    className="sc-bdVaJa eVcwAM"
     disabled={false}
     onClick={[Function]}
     size="regular"

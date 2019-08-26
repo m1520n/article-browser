@@ -1,42 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticlesList is rendered correctly 1`] = `
+exports[`ArticlesList should be rendered rendered correctly 1`] = `
 <div
   className="sc-bdVaJa glwcuW"
 >
   <div
-    className="sc-htpNat iqvSGy"
+    className="sc-bxivhb dernUS"
   >
     <div
-      className="sc-bxivhb hOjknm"
+      className="sc-ifAKCX bxjQWs"
     />
     <div
-      className="sc-gzVnrw uGeRG"
+      className="sc-htoDjs cRxafb"
     >
       <span
-        className="sc-htoDjs gaFIfX"
+        className="sc-dnqmqq hBpdmm"
       >
         Aug 26 2018
       </span>
       <span
-        className="sc-dnqmqq fUSNBF"
+        className="sc-dnqmqq sc-iwsKbI fFdvtX"
       >
         Dan Abramov
       </span>
       <a
-        className="sc-iwsKbI hLNtPO"
+        className="sc-gZMcBi kifsrt"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Medium
       </a>
     </div>
     <h2
-      className="sc-ifAKCX lejNoY"
+      className="sc-EHOje bjWfG"
     />
     <p
-      className="sc-EHOje htbPhC"
+      className="sc-bZQynM kmgnWI"
     />
     <button
-      className="sc-bwzfXH jZqDKj"
+      className="sc-htpNat evLaha"
       disabled={false}
       onClick={[Function]}
       size="regular"
@@ -46,38 +48,40 @@ exports[`ArticlesList is rendered correctly 1`] = `
     </button>
   </div>
   <div
-    className="sc-htpNat iqvSGy"
+    className="sc-bxivhb dernUS"
   >
     <div
-      className="sc-bxivhb hOjknm"
+      className="sc-ifAKCX bxjQWs"
     />
     <div
-      className="sc-gzVnrw uGeRG"
+      className="sc-htoDjs cRxafb"
     >
       <span
-        className="sc-htoDjs gaFIfX"
+        className="sc-dnqmqq hBpdmm"
       >
         Jan 23 2019
       </span>
       <span
-        className="sc-dnqmqq fUSNBF"
+        className="sc-dnqmqq sc-iwsKbI fFdvtX"
       >
         Kyle Simpson
       </span>
       <a
-        className="sc-iwsKbI hLNtPO"
+        className="sc-gZMcBi kifsrt"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         HackerNoon
       </a>
     </div>
     <h2
-      className="sc-ifAKCX lejNoY"
+      className="sc-EHOje bjWfG"
     />
     <p
-      className="sc-EHOje htbPhC"
+      className="sc-bZQynM kmgnWI"
     />
     <button
-      className="sc-bwzfXH jZqDKj"
+      className="sc-htpNat evLaha"
       disabled={false}
       onClick={[Function]}
       size="regular"
@@ -87,38 +91,40 @@ exports[`ArticlesList is rendered correctly 1`] = `
     </button>
   </div>
   <div
-    className="sc-htpNat iqvSGy"
+    className="sc-bxivhb dernUS"
   >
     <div
-      className="sc-bxivhb hOjknm"
+      className="sc-ifAKCX bxjQWs"
     />
     <div
-      className="sc-gzVnrw uGeRG"
+      className="sc-htoDjs cRxafb"
     >
       <span
-        className="sc-htoDjs gaFIfX"
+        className="sc-dnqmqq hBpdmm"
       >
         Mar 23 2018
       </span>
       <span
-        className="sc-dnqmqq fUSNBF"
+        className="sc-dnqmqq sc-iwsKbI fFdvtX"
       >
         Douglas Crockford
       </span>
       <a
-        className="sc-iwsKbI hLNtPO"
+        className="sc-gZMcBi kifsrt"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Medium
       </a>
     </div>
     <h2
-      className="sc-ifAKCX lejNoY"
+      className="sc-EHOje bjWfG"
     />
     <p
-      className="sc-EHOje htbPhC"
+      className="sc-bZQynM kmgnWI"
     />
     <button
-      className="sc-bwzfXH jZqDKj"
+      className="sc-htpNat evLaha"
       disabled={false}
       onClick={[Function]}
       size="regular"

@@ -2,7 +2,7 @@
 
 exports[`Button is rendered correctly 1`] = `
 <button
-  className="sc-bdVaJa kJKQqn"
+  className="sc-bdVaJa kHwoFP"
   disabled={false}
   onClick={[Function]}
   size="regular"

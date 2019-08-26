@@ -1,24 +1,28 @@
 import { fetchArticles as fetchArticlesFromApi } from '../../services/news.service';
-import { fetchArticles, fetchArticlesSuccess, fetchArticlesError } from '../slices/articleSlice';
+import {
+  fetchArticles,
+  fetchArticlesSuccess,
+  fetchArticlesError,
+  updateArticleFilter,
+  clearArticleFilters,
+} from '../slices/articleSlice';
 
 export const getArticles = ({
   loadMore = false,
-  page = 1,
-  pageSize = 6,
-  category = '(travel AND politics AND sports AND tech)',
+  page,
+  pageSize,
+  topic,
   from,
-  to,
   sortBy,
-} = {}) => async (dispatch) => {
+} = {}) => async dispatch => {
   dispatch(fetchArticles());
 
   try {
     const articles = await fetchArticlesFromApi({
       page,
       pageSize,
-      category,
+      topic,
       from,
-      to,
       sortBy,
     });
 
@@ -28,6 +32,47 @@ export const getArticles = ({
   }
 };
 
+export const updateFilterAndFetchArticles = ({
+  filterValues,
+  newFilterValue,
+} = {}) => async dispatch => {
+  dispatch(updateArticleFilter(newFilterValue));
+
+  dispatch(fetchArticles());
+
+  try {
+    const articles = await fetchArticlesFromApi({
+      page: 1,
+      pageSize: 6,
+      ...filterValues,
+      [newFilterValue.key]: newFilterValue.value,
+    });
+
+    return dispatch(fetchArticlesSuccess({ articles }));
+  } catch (e) {
+    return dispatch(fetchArticlesError(e.message));
+  }
+};
+
+export const clearFiltersAndFetchArticles = () => async dispatch => {
+  dispatch(clearArticleFilters());
+
+  dispatch(fetchArticles());
+
+  try {
+    const articles = await fetchArticlesFromApi({
+      page: 1,
+      pageSize: 6,
+    });
+
+    return dispatch(fetchArticlesSuccess({ articles }));
+  } catch (e) {
+    return dispatch(fetchArticlesError(e.message));
+  }
+};
+
 export default {
   getArticles,
+  updateFilterAndFetchArticles,
+  clearFiltersAndFetchArticles,
 };

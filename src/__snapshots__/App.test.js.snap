@@ -2,7 +2,7 @@
 
 exports[`App is rendered correctly 1`] = `
 <main
-  className="sc-fjdhpX gNwOKf"
+  className="sc-jzJRlG gMxaLJ"
 >
   <header
     className="sc-bdVaJa bDWFJH"
@@ -24,7 +24,7 @@ exports[`App is rendered correctly 1`] = `
         onKeyDown={[Function]}
       >
         <div
-          className=" css-1yok61r-control"
+          className=" css-mcxk8k-control"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -127,7 +127,7 @@ exports[`App is rendered correctly 1`] = `
         onKeyDown={[Function]}
       >
         <div
-          className=" css-1yok61r-control"
+          className=" css-mcxk8k-control"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -230,7 +230,7 @@ exports[`App is rendered correctly 1`] = `
         onKeyDown={[Function]}
       >
         <div
-          className=" css-1yok61r-control"
+          className=" css-mcxk8k-control"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -330,7 +330,7 @@ exports[`App is rendered correctly 1`] = `
       </div>
     </div>
     <button
-      className="sc-htpNat dOAxMk"
+      className="sc-htpNat EBEWS"
       disabled={false}
       onClick={[Function]}
       size="small"
@@ -341,15 +341,12 @@ exports[`App is rendered correctly 1`] = `
   </nav>
   <div
     className="sc-EHOje bTLlFS"
-  />
-  <button
-    className="sc-htpNat dVlQbk"
-    disabled={false}
-    onClick={[Function]}
-    size="regular"
-    type="secondary"
   >
-    Load More
-  </button>
+    <div
+      className="sc-bZQynM JjNOP"
+    >
+      No Results - try different filter settings
+    </div>
+  </div>
 </main>
 `;

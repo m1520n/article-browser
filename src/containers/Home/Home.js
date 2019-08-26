@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { startOfWeek, startOfMonth, startOfToday } from 'date-fns';
 
-import { getArticles as getArticlesAction } from '../../store/thunks/articleThunk';
 import {
-  updateArticleFilter as updateArticleFilterAction,
-  clearArticleFilters as clearArticleFiltersAction,
-} from '../../store/slices/articleSlice';
+  getArticles as getArticlesAction,
+  updateFilterAndFetchArticles as updateFilterAndFetchArticlesAction,
+  clearFiltersAndFetchArticles as clearFiltersAndFetchArticlesAction,
+} from '../../store/thunks/articleThunk';
 
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import Filters from '../../components/Filters/Filters';
@@ -20,57 +19,49 @@ const propTypes = {
   page: PropTypes.number.isRequired,
   articlesLoading: PropTypes.bool.isRequired,
   filterValues: PropTypes.shape({
-    time: PropTypes.string,
+    from: PropTypes.string,
     topic: PropTypes.string,
     sortBy: PropTypes.string,
   }).isRequired,
   getArticles: PropTypes.func.isRequired,
-  clearArticleFilters: PropTypes.func.isRequired,
-  updateArticleFilter: PropTypes.func.isRequired,
+  updateFilterAndFetchArticles: PropTypes.func.isRequired,
+  clearFiltersAndFetchArticles: PropTypes.func.isRequired,
 };
 
 const Home = ({
   articles,
   page,
-  getArticles,
   articlesLoading,
   filterValues,
-  clearArticleFilters,
-  updateArticleFilter,
+  getArticles,
+  updateFilterAndFetchArticles,
+  clearFiltersAndFetchArticles,
 }) => {
-  const { topic, time, sortBy } = filterValues;
-
-  // TODO: move to utility function
-  const dateDict = {
-    today: startOfToday(),
-    month: startOfMonth(Date.now()),
-    week: startOfWeek(Date.now()),
-  };
-
   useEffect(() => {
-    getArticles({
-      ...(topic ? { category: topic } : {}),
-      ...(time ? { from: dateDict[time] } : {}),
-      ...(sortBy ? { sortBy } : {}),
-    });
+    getArticles(filterValues);
   }, [getArticles]);
 
   const loadMore = () => {
     getArticles({
       loadMore: true,
       page: page + 1,
-      ...(topic ? { category: topic } : {}),
-      ...(time ? { from: dateDict[time] } : {}),
-      ...(sortBy ? { sortBy } : {}),
+      ...filterValues,
     });
   };
 
   const handleUpdateFilter = ({ key, value }) => {
-    updateArticleFilter({ key, value });
+    updateFilterAndFetchArticles({
+      filterValues,
+      newFilterValue: { key, value },
+    });
   };
 
   const handleClearFilters = () => {
-    clearArticleFilters();
+    clearFiltersAndFetchArticles();
+  };
+
+  const handleCTA = article => {
+    console.log(article);
   };
 
   return (
@@ -81,10 +72,12 @@ const Home = ({
         handleClearFilters={handleClearFilters}
         handleUpdateFilter={handleUpdateFilter}
       />
-      <ArticleList articles={articles} />
-      <Button type="secondary" disabled={articlesLoading} handleClick={loadMore}>
-        {articlesLoading ? 'Loading...' : 'Load More'}
-      </Button>
+      <ArticleList articles={articles} isLoading={articlesLoading} handleCTA={handleCTA} />
+      {articles.length || articlesLoading ? (
+        <Button centered type="secondary" disabled={articlesLoading} handleClick={loadMore}>
+          {articlesLoading ? 'Loading...' : 'Load More'}
+        </Button>
+      ) : null}
     </>
   );
 };
@@ -100,8 +93,8 @@ const mapStateToProps = ({ article }) => ({
 
 const mapDispatchToProps = {
   getArticles: getArticlesAction,
-  updateArticleFilter: updateArticleFilterAction,
-  clearArticleFilters: clearArticleFiltersAction,
+  updateFilterAndFetchArticles: updateFilterAndFetchArticlesAction,
+  clearFiltersAndFetchArticles: clearFiltersAndFetchArticlesAction,
 };
 
 export default connect(

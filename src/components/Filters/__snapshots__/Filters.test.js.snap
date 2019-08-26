@@ -12,7 +12,7 @@ exports[`Filters is rendered correctly 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1yok61r-control"
+        className=" css-mcxk8k-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -115,7 +115,7 @@ exports[`Filters is rendered correctly 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1yok61r-control"
+        className=" css-mcxk8k-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -218,7 +218,7 @@ exports[`Filters is rendered correctly 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1yok61r-control"
+        className=" css-mcxk8k-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -318,7 +318,7 @@ exports[`Filters is rendered correctly 1`] = `
     </div>
   </div>
   <button
-    className="sc-bdVaJa isNJEG"
+    className="sc-bdVaJa kSXncz"
     disabled={false}
     onClick={[Function]}
     size="small"

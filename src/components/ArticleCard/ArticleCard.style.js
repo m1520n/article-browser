@@ -5,25 +5,27 @@ import Button from '../Button/Button';
 import { fonts, colors, breakpoints } from '../../styles/variables';
 
 export const ArticleCardWrapper = styled.div`
-  flex: 0 1 30%;
-  width: 37rem;
+  flex: 0 1 32%;
+  width: 32%;
   font-family: ${fonts.arialMT};
   margin: 2.6rem 0 1.7rem;
 
   @media ${breakpoints.tablet} {
     flex: 1;
-    flex: 0 1 45%;
+    flex: 0 1 48%;
+    width: 47%;
   }
 
   @media ${breakpoints.mobile} {
-    flex: 1;
+    flex: 0 1 100%;
     widht: 100%;
   }
 `;
 
 export const CoverImage = styled.div`
   width: 100%;
-  height: 21.2rem;
+  height: 0;
+  padding-top: 56.25%;
   background-image: url(${({ url }) => url});
   background-size: cover;
 `;
@@ -60,24 +62,27 @@ export const CardGroup = styled.div`
   margin-top: 2.4rem;
 `;
 
-export const Date = styled.span`
+export const BaseText = styled.span`
   color: ${colors.blackish};
   font-size: 1.4rem;
   font-family: ${fonts.arialMT};
   margin-right: 1.6rem;
 `;
 
-export const Author = styled.span`
-  color: ${colors.blackish};
-  font-size: 1.4rem;
-  margin-right: 1.6rem;
-  font-family: ${fonts.arialMT};
+export const Author = styled(BaseText)`
+  display: inline-block;
+  vertical-align: bottom;
+  white-space: nowrap;
+  width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const Source = styled.a`
   color: ${colors.royalBlue};
   font-size: 1.4rem;
   font-family: ${fonts.arialMT};
+  text-decoration: none;
 
   :hover {
     color: ${colors.sapphire};

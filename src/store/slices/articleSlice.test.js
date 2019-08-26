@@ -14,7 +14,7 @@ const baseState = {
   page: 1,
   disableMore: false,
   filterValues: {
-    time: null,
+    from: null,
     topic: null,
     sortBy: null,
   },
@@ -135,7 +135,7 @@ describe('arcticlesSlice', () => {
     expect(updateArticleFilterAction).toEqual({
       ...baseState,
       filterValues: {
-        time: null,
+        from: null,
         topic: 'politics',
         sortBy: null,
       },
@@ -146,7 +146,7 @@ describe('arcticlesSlice', () => {
     const initialState = {
       ...baseState,
       filterValues: {
-        time: 'week',
+        from: 'week',
         topic: 'politics',
         sortBy: 'popularity',
       },
@@ -163,7 +163,7 @@ describe('arcticlesSlice', () => {
     expect(clearArticleFiltersAction).toEqual({
       ...baseState,
       filterValues: {
-        time: null,
+        from: null,
         topic: null,
         sortBy: null,
       },

@@ -8,7 +8,7 @@ import { FiltersWrapper, DropDownWrapper } from './Filters.style';
 
 const propTypes = {
   filterValues: PropTypes.shape({
-    time: PropTypes.string,
+    from: PropTypes.string,
     sortBy: PropTypes.string,
     topic: PropTypes.string,
   }).isRequired,
@@ -27,13 +27,13 @@ const Filters = ({ filterValues, handleClearFilters, handleUpdateFilter }) => {
     { value: 'popularity', label: 'Popularity' },
     { value: 'publishedAt', label: 'Published at' },
   ];
-  const dateOptions = [
+  const fromOptions = [
     { value: 'month', label: 'This month' },
     { value: 'week', label: 'This week' },
     { value: 'today', label: 'Today' },
   ];
 
-  const updateFilter = (key) => (value) => {
+  const updateFilter = key => value => {
     handleUpdateFilter({ key, value });
   };
 
@@ -49,14 +49,14 @@ const Filters = ({ filterValues, handleClearFilters, handleUpdateFilter }) => {
         />
         <DropDown
           isClearable
-          options={sortByOptions}
+          options={fromOptions}
           placeholder="Time"
-          handleSelect={updateFilter('time')}
-          selectedOption={filterValues.time}
+          handleSelect={updateFilter('from')}
+          selectedOption={filterValues.from}
         />
         <DropDown
           isClearable
-          options={dateOptions}
+          options={sortByOptions}
           placeholder="Sort by"
           handleSelect={updateFilter('sortBy')}
           selectedOption={filterValues.sortBy}

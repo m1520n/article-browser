@@ -6,7 +6,7 @@ exports[`DropDown is rendered correctly 1`] = `
   onKeyDown={[Function]}
 >
   <div
-    className=" css-1yok61r-control"
+    className=" css-mcxk8k-control"
     onMouseDown={[Function]}
     onTouchEnd={[Function]}
   >

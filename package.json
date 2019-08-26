@@ -48,6 +48,7 @@
     "babel-loader": "^8.0.6",
     "eslint": "^6.2.1",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.15.1",
@@ -65,7 +66,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "airbnb"
+      "airbnb",
+      "prettier"
     ],
     "plugins": [
       "jest"

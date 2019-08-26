@@ -22,9 +22,7 @@ const defaultProps = {
   isClearable: false,
 };
 
-const DropDown = ({
-  options, selectedOption, placeholder, isClearable, handleSelect,
-}) => {
+const DropDown = ({ options, selectedOption, placeholder, isClearable, handleSelect }) => {
   const handleChange = ({ value }) => {
     let newValue;
     if (isClearable) {
@@ -36,7 +34,7 @@ const DropDown = ({
   };
 
   const customStyles = {
-    control: (base) => ({
+    control: base => ({
       ...base,
       color: colors.blackish,
       border: 0,
@@ -44,13 +42,14 @@ const DropDown = ({
       borderBottom: `.1rem solid ${colors.whiteSmoke}`,
       boxShadow: null,
       width: '10.4rem',
+      marginRight: '1.6rem',
       fontFamily: fonts.arialMT,
       fontSize: '1.4rem',
       '&:hover': {
         color: colors.royalBlue,
       },
     }),
-    menu: (base) => ({
+    menu: base => ({
       ...base,
       borderRadius: 0,
       hyphens: 'auto',
@@ -62,12 +61,12 @@ const DropDown = ({
       fontSize: '1.4rem',
       top: '3.8rem',
     }),
-    indicatorContainer: (base) => ({
+    indicatorContainer: base => ({
       ...base,
       padding: 0,
     }),
 
-    indicatorSeparator: (base) => ({
+    indicatorSeparator: base => ({
       ...base,
       background: 'none',
     }),

@@ -18,6 +18,8 @@ const sizes = {
 };
 
 export const ButtonWrapper = styled.button`
+  position: relative;
+  display: block;
   border: none;
   cursor: pointer;
   font-family: ${fonts.arialMT};
@@ -30,6 +32,7 @@ export const ButtonWrapper = styled.button`
   color: ${({ type }) => (type === 'primary' ? colors.white : colors.royalBlue)};
   border: 1px solid ${colors.royalBlue};
   ${({ disabled }) => disabled && 'pointer-events: none;'}
+  ${({ centered }) => centered && 'margin: 0 auto;'}
 
   :hover {
     background-color: ${({ type }) => (type === 'primary' ? colors.sapphire : colors.royalBlue)};
