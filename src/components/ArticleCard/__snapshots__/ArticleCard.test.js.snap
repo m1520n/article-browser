@@ -5,8 +5,8 @@ exports[`should render ArticleCard correctly 1`] = `
   className="sc-bwzfXH egPcon"
 >
   <div
-    alt="TITLE"
     className="sc-htpNat jXHKvM"
+    title="TITLE"
   />
   <div
     className="sc-bZQynM bdZCbq"
@@ -30,7 +30,7 @@ exports[`should render ArticleCard correctly 1`] = `
     </a>
   </div>
   <h2
-    className="sc-bxivhb ladvwN"
+    className="sc-bxivhb leuzNu"
   >
     TITLE
   </h2>

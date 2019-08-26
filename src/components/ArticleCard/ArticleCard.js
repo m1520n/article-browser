@@ -31,7 +31,7 @@ const propTypes = {
 
 const ArticleCard = ({ article, handleCTA }) => (
   <ArticleCardWrapper>
-    <CoverImage alt={article.title} url={article.urlToImage} />
+    <CoverImage title={article.title} url={article.urlToImage} />
     <CardGroup>
       <BaseText>{format(parseISO(article.publishedAt), 'MMM dd yyyy')}</BaseText>
       <Author>{article.author}</Author>

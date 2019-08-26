@@ -30,6 +30,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-modal": "^3.10.1",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-select": "^3.0.4",
@@ -67,10 +68,13 @@
   "eslintConfig": {
     "extends": [
       "airbnb",
-      "prettier"
+      "plugin:prettier/recommended",
+      "prettier/react"
     ],
     "plugins": [
-      "jest"
+      "jest",
+      "jsx-a11y",
+      "prettier"
     ],
     "env": {
       "browser": true,
@@ -78,6 +82,9 @@
       "es6": true
     },
     "rules": {
+      "prettier/prettier": [
+        "error"
+      ],
       "react/jsx-filename-extension": 0
     },
     "globals": {

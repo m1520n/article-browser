@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import GlobalStyles from './styles/globalStyles';
 
 import Home from './containers/Home/Home';
-import Article from './containers/Article/Article';
 import NotFound from './containers/NotFound/NotFound';
 import Layout from './components/Layout/Layout';
 
@@ -18,7 +17,6 @@ const App = () => (
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/articles/:id" component={Article} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>

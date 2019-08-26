@@ -31,6 +31,7 @@ export const CoverImage = styled.div`
 `;
 
 export const CardTitle = styled.h2`
+  font-family: ${fonts.arialMT};
   font-size: 2.4rem;
   white-space: nowrap;
   overflow: hidden;
@@ -51,6 +52,7 @@ export const CardText = styled.p`
 `;
 
 export const ReadMoreButton = styled(Button)`
+  font-family: ${fonts.arialMT};
   background-color: ${colors.royalBlue};
   color: ${colors.white};
   width: 100%;

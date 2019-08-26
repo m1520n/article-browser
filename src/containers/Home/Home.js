@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Modal from 'react-modal';
 
 import {
   getArticles as getArticlesAction,
@@ -11,6 +12,7 @@ import {
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import Filters from '../../components/Filters/Filters';
 import ArticleList from '../../components/ArticlesList/ArticlesList';
+import Article from '../../components/Article/Article';
 
 import Button from '../../components/Button/Button';
 
@@ -28,6 +30,8 @@ const propTypes = {
   clearFiltersAndFetchArticles: PropTypes.func.isRequired,
 };
 
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
+
 const Home = ({
   articles,
   page,
@@ -37,6 +41,21 @@ const Home = ({
   updateFilterAndFetchArticles,
   clearFiltersAndFetchArticles,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeArticle, setActiveArticle] = useState({});
+
+  const modalStyles = {
+    content: {
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      border: 'none',
+      margin: 0,
+      padding: 0,
+    },
+  };
+
   useEffect(() => {
     getArticles(filterValues);
   }, [getArticles]);
@@ -61,7 +80,12 @@ const Home = ({
   };
 
   const handleCTA = article => {
-    console.log(article);
+    setActiveArticle(article);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -78,6 +102,9 @@ const Home = ({
           {articlesLoading ? 'Loading...' : 'Load More'}
         </Button>
       ) : null}
+      <Modal isOpen={isModalOpen} style={modalStyles}>
+        <Article article={activeArticle} handleClose={handleCloseModal} />
+      </Modal>
     </>
   );
 };

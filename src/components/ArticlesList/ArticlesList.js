@@ -29,11 +29,11 @@ const ArticlesList = ({ articles, isLoading, handleCTA }) => (
   <ArticlesListWrapper>
     {articles.length
       ? articles.map(article => (
-        <ArticleCard
-          article={article}
-          key={`${article.author}-${article.publishedAt}`}
-          handleCTA={handleCTA}
-        />
+          <ArticleCard
+            article={article}
+            key={`${article.author}-${article.publishedAt}`}
+            handleCTA={handleCTA}
+          />
         ))
       : renderNoResults(isLoading)}
   </ArticlesListWrapper>
